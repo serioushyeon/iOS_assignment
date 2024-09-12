@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dKM-0M-Yox">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--City-->
+        <scene sceneID="1iW-53-77e">
+            <objects>
+                <viewController title="City" id="6J5-xa-pYv" customClass="CityViewController" customModule="MultipleViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EqS-9b-cOI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JqR-jp-nNl">
+                                <rect key="frame" x="10" y="69" width="373" height="690"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qP9-Ag-a26">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="453"/>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="240" verticalHuggingPriority="240" text="Select City" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rv0-Ej-tRX">
+                                        <rect key="frame" x="0.0" y="463.33333333333343" width="373" height="226.66666666666669"/>
+                                        <color key="backgroundColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Rv0-Ej-tRX" firstAttribute="height" secondItem="qP9-Ag-a26" secondAttribute="height" multiplier="0.5" id="a88-89-JKP"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RtT-uv-uZO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JqR-jp-nNl" firstAttribute="top" secondItem="RtT-uv-uZO" secondAttribute="top" constant="10" id="9RZ-VZ-poG"/>
+                            <constraint firstItem="RtT-uv-uZO" firstAttribute="trailing" secondItem="JqR-jp-nNl" secondAttribute="trailing" constant="10" id="SEo-9j-udX"/>
+                            <constraint firstItem="RtT-uv-uZO" firstAttribute="bottom" secondItem="JqR-jp-nNl" secondAttribute="bottom" constant="10" id="ZNU-1u-9rR"/>
+                            <constraint firstItem="JqR-jp-nNl" firstAttribute="leading" secondItem="RtT-uv-uZO" secondAttribute="leading" constant="10" id="rmi-wh-g1Y"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="City" image="CityIcon" id="0Eh-oX-2aK"/>
+                    <connections>
+                        <outlet property="cityPickerView" destination="qP9-Ag-a26" id="03I-pW-XRQ"/>
+                        <outlet property="descriptionLabel" destination="Rv0-Ej-tRX" id="XbP-80-kJE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iDE-IR-gGm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11" y="-234"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="DRY-G9-YVX">
+            <objects>
+                <viewController title="Map" id="LhV-8z-7ev" customClass="MapViewController" customModule="MultipleViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fDa-g6-unu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1jj-dJ-KRX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map.fill" catalog="system" id="Ic2-pB-Odj"/>
+                    <connections>
+                        <outlet property="mapView" destination="fDa-g6-unu" id="unO-dq-z9b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dr8-V2-19F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11" y="227"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ovb-47-1Ys">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dKM-0M-Yox" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2GD-Kh-AiT">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6J5-xa-pYv" kind="relationship" relationship="viewControllers" id="bsO-8C-eSc"/>
+                        <segue destination="LhV-8z-7ev" kind="relationship" relationship="viewControllers" id="FiD-wa-T6w"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yZD-EV-wSB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-938.16793893129773" y="-16.197183098591552"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CityIcon" width="25" height="25"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
